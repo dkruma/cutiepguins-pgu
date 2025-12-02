@@ -51,14 +51,13 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: transparent;
         padding: 1rem 2rem;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        backdrop-filter: blur(16px);
       }
 
       .logo {
@@ -76,6 +75,7 @@
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #3498db;
+        object-position: center 15%;
       }
 
       .nav-links {
@@ -112,9 +112,11 @@
         height: 300px;
         animation: float 3s ease-in-out infinite;
         margin-bottom: 2rem;
-        border-radius: 20px;
+        border-radius: 200px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         object-fit: cover;
+        border: 6px solid #3498db;
+        object-position: center 20%;
       }
 
       @keyframes float {
@@ -275,7 +277,7 @@
       }
 
       /* Roadmap */
-      .roadmap {
+      /* .roadmap {
         background: rgba(255, 255, 255, 0.9);
         border-radius: 30px;
         padding: 3rem;
@@ -311,7 +313,7 @@
         content: "❄️";
         position: absolute;
         left: 0;
-      }
+      } */
 
       /* Tokenomics */
       .tokenomics {
@@ -445,17 +447,17 @@
     <nav>
       <div class="logo">
         <img
-          src="img/pgu3.jpeg"
+          src="img/pgu-logo.jpeg"
           alt="Cutiepguins Logo"
           class="logo-img"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          onerror="this.outerHTML='<div style=\'font-size: 40px;\'>🐧</div>';"
         />
-        <span style="display: none">🐧</span>
         Cutiepguins
       </div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#why">Why PGU</a></li>
+        <!-- <li><a href="#roadmap">Roadmap</a></li> -->
         <li><a href="#tokenomics">Tokenomics</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -464,7 +466,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <img
-        src="img/pgu3.jpeg"
+        src="img/pgu-logo.jpeg"
         alt="Cutiepguins Mascot"
         class="hero-penguin"
         onerror="this.outerHTML='<div style=\'font-size: 150px;\'>🐧</div>';"
@@ -484,7 +486,7 @@
     <!-- What is PGU -->
     <section id="about">
       <div class="what-is">
-        <h2 class="section-title"></h2>What is $PGU?</h2>
+        <h2 class="section-title">What is $PGU?</h2>
         <p>
           $PGU is a community-driven meme coin inspired by the lives of homeless
           penguins from Antarctica — rescued, cared for, and loved by millions
@@ -560,6 +562,40 @@
       </div>
     </section>
 
+    <!-- Roadmap
+    <section id="roadmap">
+      <h2 class="section-title">🎁 Roadmap (Cute Igloo Map)</h2>
+      <div class="roadmap">
+        <div class="roadmap-phase">
+          <h3>Phase 1 — Baby Penguins Hatch</h3>
+          <ul>
+            <li>Launch $PGU</li>
+            <li>Website + branding</li>
+            <li>First meme drops</li>
+            <li>Social colony growth</li>
+          </ul>
+        </div>
+        <div class="roadmap-phase">
+          <h3>Phase 2 — The Colony Expands</h3>
+          <ul>
+            <li>Listings on DEX</li>
+            <li>Meme contests + giveaways</li>
+            <li>First batch of penguin paper-puzzle NFTs</li>
+            <li>Partnerships with meme pages</li>
+          </ul>
+        </div>
+        <div class="roadmap-phase">
+          <h3>Phase 3 — Antarctic Domination</h3>
+          <ul>
+            <li>CEX listings</li>
+            <li>Community events</li>
+            <li>Merch drops (maybe penguin plushies 🐧)</li>
+            <li>Becoming the most loved penguin coin ever</li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+
     <!-- Tokenomics -->
     <section id="tokenomics">
       <div class="tokenomics">
@@ -593,60 +629,19 @@
       <h2 class="section-title">📷 Meet the Cutiepguins Family</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <div
-            style="
-              background: linear-gradient(135deg, #667eea, #764ba2);
-              height: 300px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 120px;
-            "
-          >
-            🐧
-          </div>
+          <img src="img/pgu1.jpeg" alt="Penguin Image 1" />
         </div>
+
         <div class="gallery-item">
-          <div
-            style="
-              background: linear-gradient(135deg, #f093fb, #f5576c);
-              height: 300px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 120px;
-            "
-          >
-            🎨
-          </div>
+          <img src="img/pgu2.jpeg" alt="Penguin Image 2" />
         </div>
+
         <div class="gallery-item">
-          <div
-            style="
-              background: linear-gradient(135deg, #4facfe, #00f2fe);
-              height: 300px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 120px;
-            "
-          >
-            ❄️
-          </div>
+          <img src="img/pgu5.jpeg" alt="Penguin Image 4" />
         </div>
+
         <div class="gallery-item">
-          <div
-            style="
-              background: linear-gradient(135deg, #43e97b, #38f9d7);
-              height: 300px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 120px;
-            "
-          >
-            🧩
-          </div>
+          <img src="img/pgu7.jpeg" alt="Penguin Image 5" />
         </div>
       </div>
     </section>
@@ -662,6 +657,9 @@
         <div class="cta-buttons">
           <a href="#" class="btn" style="background: white; color: #ff6b6b"
             >Telegram</a
+          >
+          <a href="#" class="btn" style="background: white; color: #ff6b6b"
+            >Discord</a
           >
           <a
             href="https://x.com/cutiepguins?s=21"
